@@ -37,6 +37,7 @@ include "infra/conexao.php";
                     <th>Senha</th>
                 </tr>
 
+            </main>
 
 </body>
 </html>
