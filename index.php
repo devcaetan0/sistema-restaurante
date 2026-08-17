@@ -15,7 +15,7 @@ include "infra/conexao.php";
     
 <main>
         <h2>Adicione um novo Usuário!</h2>
-        <form action="public/cadastrar.php" method="POST">
+        <form action="public/usuarios-cadastrar.php" method="POST">
             <label for="nome">Nome:</label>
             <input type="text" name="nome">
             <br>
