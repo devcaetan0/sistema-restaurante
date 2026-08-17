@@ -38,6 +38,31 @@ include "infra/conexao.php";
                 </tr>
 
             </main>
-
+</div>
+            <div> 
+        
+            <h2>Adicione um novo Prato!</h2>
+        <form action="public/usuarios-cadastrar.php" method="POST">
+            <label for="nome">Nome:</label>
+            <input type="text" name="nome">
+            <br>
+            <label for="email">Email:</label>
+            <input type="text" name="email">
+            <br>
+            <label for="senha">Senha:</label>
+            <input type="password" name="senha">
+            <br>
+            <button type="submit">Cadastrar</button>
+        </form>
+        <div>
+            <h2>Pratos Cadastrados</h2>
+            <table>
+                <tr>
+                    <th>ID</th>
+                    <th>Nome</th>
+                    <th>Email</th>
+                    <th>Senha</th>
+                </tr>
+ </div>
 </body>
 </html>
