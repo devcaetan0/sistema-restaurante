@@ -16,4 +16,4 @@ CREATE TABLE prato (
     preco DECIMAL(10, 2) NOT NULL
 );
 
-INSERT INTO usuario VALUES ('admin', 'admin@gmail.com', '123');
+INSERT INTO usuario(nome, email, senha) VALUES ('admin', 'admin@gmail.com', '123');
