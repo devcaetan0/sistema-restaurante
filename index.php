@@ -95,7 +95,25 @@ $pratos = mysqli_query($conexao, "SELECT * FROM prato");
                     <th>Nome</th>
                     <th>Descrição</th>
                     <th>Preço</th>
+                    <th>Categoria</th>
                 </tr>
+
+                <?php while ($linha = mysqli_fetch_assoc($pratos)) { ?>
+                    <tr>
+                        <td><?php echo $linha["id"] ?></td>
+                        <td><?php echo $linha["nome"] ?></td>
+                        <td><?php echo $linha["descricao"] ?></td>
+                        <td><?php echo $linha["preco"] ?></td>
+                        <td><?php echo $linha["categoria"] ?></td>
+                        <td>
+                            <a href="public/pratos-editar.php? id=<?php echo $linha["id"] ?>">Editar</a>
+                            <a href="public/pratos-excluir.php? id=<?php echo $linha["id"] ?>">Excluir</a>
+                        </td>
+                    </tr>
+                <?php } ?>
+
+                
+
             </table>
         </div>
     </main>
