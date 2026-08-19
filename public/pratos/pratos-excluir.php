@@ -1,12 +1,12 @@
 <?php
 
-include" ../infra/conexao.php";
+include"../../infra/conexao.php";
 $id = $_GET["id"];
 
 $stmt = mysqli_prepare(
     $conexao,
 
-    "DELETE FROM pratos WHERE id = ? "
+    "DELETE FROM prato WHERE id = ? "
 
 );
 

@@ -1,6 +1,6 @@
 <?php
 
-include "../infra/conexao.php";
+include "../../infra/conexao.php";
 
 $nome = $_POST["nome"];
 $email = $_POST["email"];
@@ -15,5 +15,5 @@ mysqli_stmt_bind_param($stmt, "sss", $nome, $email, $senha);
 mysqli_stmt_execute($stmt);
 
 header("Location: ../index.php");
-
+exit();
 ?>

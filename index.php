@@ -22,9 +22,9 @@ $pratos = mysqli_query($conexao, "SELECT * FROM prato");
 
         <div>
             <h2>Adicione um novo Usuário!</h2>
-            <form action="public/usuarios-cadastrar.php" method="POST">
+            <form action="public/usuarios/usuarios-cadastrar.php" method="POST">
                 <label for="nome">Nome:</label>
-                <input type="text" name="nome-usuario">
+                <input type="text" name="nome">
                 <br>
                 <label for="email">Email:</label>
                 <input type="text" name="email">
@@ -61,7 +61,7 @@ $pratos = mysqli_query($conexao, "SELECT * FROM prato");
 
         <div>
             <h2>Adicione um novo Prato!</h2>
-            <form action="public/pratos-cadastrar.php" method="POST">
+            <form action="public/pratos/pratos-cadastrar.php" method="POST">
                 <label for="nome">Nome:</label>
                 <input type="text" name="nome-prato">
                 <br>
@@ -106,8 +106,8 @@ $pratos = mysqli_query($conexao, "SELECT * FROM prato");
                         <td><?php echo $linha["preco"] ?></td>
                         <td><?php echo $linha["categoria"] ?></td>
                         <td>
-                            <a href="public/pratos-editar.php? id=<?php echo $linha["id"] ?>">Editar</a>
-                            <a href="public/pratos-excluir.php? id=<?php echo $linha["id"] ?>">Excluir</a>
+                            <a href="public/pratos/pratos-editar.php? id=<?php echo $linha["id"] ?>">Editar</a>
+                            <a href="public/pratos/pratos-excluir.php? id=<?php echo $linha["id"] ?>">Excluir</a>
                         </td>
                     </tr>
                 <?php } ?>

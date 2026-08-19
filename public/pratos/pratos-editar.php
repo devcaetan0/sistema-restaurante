@@ -1,13 +1,13 @@
 <?php
 
-include "../infra/conexao.php";
+include "../../infra/conexao.php";
 
 $id = $_GET["id"];
 
 $stmt = mysqli_prepare(
     $conexao,
 
-    "SELECT * FROM pratos WHERE id = ?"
+    "SELECT * FROM prato WHERE id = ?"
 );
 
 mysqli_stmt_bind_param($stmt, "i", $id);
