@@ -1,8 +1,8 @@
 <?php
 
-include "../infra/conexao.php";
+include "../../infra/conexao.php";
 
-$nome = $_POST["nome"];
+$nome = $_POST["nome-prato"];
 $descricao = $_POST["descricao"];
 $preco = $_POST["preco"];
 $categoria = $_POST["categoria"];
@@ -17,6 +17,7 @@ mysqli_stmt_bind_param($stmt, "ssdsi", $nome, $descricao, $preco, $categoria, $i
 
 mysqli_stmt_execute($stmt);
 
-header("Location: ../index.php");
+header("Location: ../../index.php");
+exit();
 
 ?>
