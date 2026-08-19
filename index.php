@@ -1,5 +1,8 @@
 <?php
 include "infra/conexao.php";
+
+$tabelaUsuarios = mysqli_query($conexao, "SELECT * FROM usuario");
+$dropUsuarios = mysqli_query($conexao, "SELECT * FROM usuario");
 $pratos = mysqli_query($conexao, "SELECT * FROM prato");
 ?>
 
@@ -42,6 +45,15 @@ $pratos = mysqli_query($conexao, "SELECT * FROM prato");
                     <th>Email</th>
                     <th>Senha</th>
                 </tr>
+                <?php while ($usuario = mysqli_fetch_assoc($tabelaUsuarios)) {
+                    echo "<tr>";
+                    echo "<td>" . $usuario['id'] . "</td>";
+                    echo "<td>" . $usuario['nome'] . "</td>";
+                    echo "<td>" . $usuario['email'] . "</td>";
+                    echo "<td>" . $usuario['senha'] . "</td>";
+                    echo "</tr>";
+                }
+                ?>
             </table>
         </div>
 
@@ -66,6 +78,9 @@ $pratos = mysqli_query($conexao, "SELECT * FROM prato");
                 <label for="id_usuario">Cadastrado por:</label>
                 <select name="id_usuario">
                     <option value="0">Selecione</option>
+                    <?php while ($usuario = mysqli_fetch_assoc($dropUsuarios)) { ?>
+                        <option value="<?php echo $usuario['id']; ?>"><?php echo $usuario['nome']; ?></option>
+                    <?php } ?>
                 </select>
                 <br>
                 <button type="submit">Cadastrar</button>
