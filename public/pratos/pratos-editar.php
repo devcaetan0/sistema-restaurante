@@ -63,3 +63,9 @@ $pratos =mysqli_fetch_assoc($resultado);
                 <button type="submit">Atualizar</button>
             </form>
         </div>
+
+</main>
+
+</body>
+
+</html>
